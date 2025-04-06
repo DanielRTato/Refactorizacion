@@ -2,13 +2,13 @@ public class Main {
     /**
      * metodo para devolver la puntuacion de tenis
      */
-    public static String getScore(int m_score1, int m_score2) {
+    public static String getScore(int puntuacionJugador1, int puntuacionJugador2) {
         String score = "";
         int tempScore=0;
 
         //
-        if (m_score1 == m_score2) {
-            switch (m_score1)
+        if (puntuacionJugador1 == puntuacionJugador2) {
+            switch (puntuacionJugador1)
             {
                 case 0:
                     score = "Love-All";
@@ -28,9 +28,9 @@ public class Main {
 
             }
         }
-        else if (m_score1 >=4 || m_score2 >=4)
+        else if (puntuacionJugador1 >=4 || puntuacionJugador2 >=4)
         {
-            int minusResult = m_score1-m_score2;
+            int minusResult = puntuacionJugador1-puntuacionJugador2;
             if (minusResult==1) score ="Advantage player1";
             else if (minusResult ==-1) score ="Advantage player2";
             else if (minusResult>=2) score = "Win for player1";
@@ -40,8 +40,8 @@ public class Main {
         {
             for (int i=1; i<3; i++)
             {
-                if (i==1) tempScore = m_score1;
-                else { score+="-"; tempScore = m_score2;}
+                if (i==1) tempScore = puntuacionJugador1;
+                else { score+="-"; tempScore = puntuacionJugador2;}
                 switch(tempScore)
                 {
                     case 0:
