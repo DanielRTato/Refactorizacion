@@ -2,33 +2,22 @@ public class Main {
     /**
      * metodo para devolver la puntuacion de tenis
      */
+
+
+
+
+
     public static String getScore(int puntuacionJugador1, int puntuacionJugador2) {
+        if (puntuacionJugador1 == puntuacionJugador2){
+            return getEmpate(puntuacionJugador1);
+        }
+
         String score = "";
         int tempScore=0;
 
-        //
-        if (puntuacionJugador1 == puntuacionJugador2) {
-            switch (puntuacionJugador1)
-            {
-                case 0:
-                    score = "Love-All";
-                    break;
-                case 1:
-                    score = "Fifteen-All";
-                    break;
-                case 2:
-                    score = "Thirty-All";
-                    break;
-                case 3:
-                    score = "Forty-All";
-                    break;
-                default:
-                    score = "Deuce";
-                    break;
 
-            }
-        }
-        else if (puntuacionJugador1 >=4 || puntuacionJugador2 >=4)
+
+       if (puntuacionJugador1 >=4 || puntuacionJugador2 >=4)
         {
             int minusResult = puntuacionJugador1-puntuacionJugador2;
             if (minusResult==1) score ="Advantage player1";
@@ -62,4 +51,28 @@ public class Main {
         }
     return score;
     }
+
+    public static String getEmpate (int puntuacion){
+        switch (puntuacion)
+        {
+            case 0:
+                return "Love-All";
+            case 1:
+                return "Fifteen-All";
+
+            case 2:
+                return "Thirty-All";
+
+            case 3:
+                return "Forty-All";
+
+            default:
+                return "Deuce";
+
+
+        }
+    }
+
+
+
 }
