@@ -18,6 +18,11 @@ public class Main {
         return getMarcadorNormal(puntuacionJugador1, puntuacionJugador2);
     }
 
+    /**
+     *
+     * @param puntos
+     * @return
+     */
     private static String getNombrePuntuacion(int puntos) {
         switch (puntos) {
             case 0:
