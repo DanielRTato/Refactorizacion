@@ -13,37 +13,24 @@ public class Main {
             return advantageWin(puntuacionJugador1, puntuacionJugador2);
         }
 
-        String score = "";
-        int tempScore=0;
 
 
+        return getMarcadorNormal(puntuacionJugador1, puntuacionJugador2);
+    }
 
-
-
-
-            for (int i=1; i<3; i++)
-            {
-                if (i==1) tempScore = puntuacionJugador1;
-                else { score+="-"; tempScore = puntuacionJugador2;}
-                switch(tempScore)
-                {
-                    case 0:
-                        score+="Love";
-                        break;
-                    case 1:
-                        score+="Fifteen";
-                        break;
-                    case 2:
-                        score+="Thirty";
-                        break;
-                    case 3:
-                        score+="Forty";
-                        break;
-                }
-            }
-
-
-    return score;
+    private static String getNombrePuntuacion(int puntos) {
+        switch (puntos) {
+            case 0:
+                return "Love";
+            case 1:
+                return "Fifteen";
+            case 2:
+                return "Thirty";
+            case 3:
+                return "Forty";
+            default:
+                return "Invalid";
+        }
     }
 
     public static String getEmpate (int puntuacion){
@@ -77,6 +64,9 @@ public class Main {
         return "Win for player2";
     }
 
+    private static String getMarcadorNormal(int jugador1, int jugador2) {
+        return getNombrePuntuacion(jugador1) + "-" + getNombrePuntuacion(jugador2);
+    }
 
 
 }
