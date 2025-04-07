@@ -3,13 +3,14 @@ public class Main {
      * metodo para devolver la puntuacion de tenis
      */
 
-
-
-
-
     public static String getScore(int puntuacionJugador1, int puntuacionJugador2) {
-        if (puntuacionJugador1 == puntuacionJugador2){
+
+        if (puntuacionJugador1 == puntuacionJugador2) {
             return getEmpate(puntuacionJugador1);
+        }
+
+        if (puntuacionJugador1 >= 4 || puntuacionJugador2 >= 4) {
+            return advantageWin(puntuacionJugador1, puntuacionJugador2);
         }
 
         String score = "";
@@ -17,16 +18,9 @@ public class Main {
 
 
 
-       if (puntuacionJugador1 >=4 || puntuacionJugador2 >=4)
-        {
-            int minusResult = puntuacionJugador1-puntuacionJugador2;
-            if (minusResult==1) score ="Advantage player1";
-            else if (minusResult ==-1) score ="Advantage player2";
-            else if (minusResult>=2) score = "Win for player1";
-            else score ="Win for player2";
-        }
-        else
-        {
+
+
+
             for (int i=1; i<3; i++)
             {
                 if (i==1) tempScore = puntuacionJugador1;
@@ -48,7 +42,7 @@ public class Main {
                 }
             }
 
-        }
+
     return score;
     }
 
@@ -71,6 +65,16 @@ public class Main {
 
 
         }
+    }
+
+    public static String advantageWin (int jugador1, int jugador2){
+        int diferencia = jugador1 - jugador2;
+
+        if (diferencia == 1) return "Advantage player1";
+        if (diferencia == -1) return "Advantage player2";
+        if (diferencia >= 2) return "Win for player1";
+
+        return "Win for player2";
     }
 
 
