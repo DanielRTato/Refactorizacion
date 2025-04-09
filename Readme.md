@@ -38,9 +38,4 @@ Traduce los valores numéricos de la puntuación a palabras:
 - `0` → `"Love"`, `1` → `"Fifteen"`, `2` → `"Thirty"`, `3` → `"Forty"`.
 - Devuelve `"Invalid"` si el valor no es válido.
 
-## Beneficios de la Refactorización
-
-- **Legibilidad**: El código es más fácil de entender gracias a nombres descriptivos y funciones específicas.
-- **Modularidad**: Cada función tiene una única responsabilidad, lo que facilita su prueba y mantenimiento.
-- **Reutilización**: Se evita la repetición de código al encapsular lógica común en funciones auxiliares.
 
