@@ -6,11 +6,11 @@ public class Main {
     public static String getScore(int puntuacionJugador1, int puntuacionJugador2) {
 
         if (puntuacionJugador1 == puntuacionJugador2) {
-            return getEmpate(puntuacionJugador1);
+            return getTieScores(puntuacionJugador1);
         }
 
         if (puntuacionJugador1 >= 4 || puntuacionJugador2 >= 4) {
-            return advantageWin(puntuacionJugador1, puntuacionJugador2);
+            return advantageOrWin(puntuacionJugador1, puntuacionJugador2);
         }
 
 
@@ -38,8 +38,8 @@ public class Main {
         }
     }
 
-    public static String getEmpate (int puntuacion){
-        switch (puntuacion)
+    public static String getTieScores(int pointPlayers){
+        switch (pointPlayers)
         {
             case 0:
                 return "Love-All";
@@ -59,7 +59,7 @@ public class Main {
         }
     }
 
-    public static String advantageWin (int jugador1, int jugador2){
+    public static String advantageOrWin(int jugador1, int jugador2){
         int diferencia = jugador1 - jugador2;
 
         if (diferencia == 1) return "Advantage player1";

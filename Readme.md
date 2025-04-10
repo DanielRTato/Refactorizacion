@@ -1,15 +1,11 @@
-# Refactorización del Código de Puntuación de Tenis
-
-Este proyecto implementa un sistema para calcular y mostrar la puntuación en un partido de tenis. A continuación, se detalla la estructura del código y las funciones principales, explicando su propósito y cómo se han refactorizado para mejorar la legibilidad y modularidad.
-
 ## Cambios Realizados
 
 1. **Renombrar Variables y Métodos**:
-  - `m_score1` y `m_score2` se renombraron a `puntuacionJugador1` y `puntuacionJugador2` para mejorar la claridad y consistencia en el idioma.
+  - `m_score1` y `m_score2` cambiados a `puntuacionJugador1` y `puntuacionJugador2` para mejorar la claridad.
   - Los métodos fueron renombrados para describir mejor su funcionalidad.
 
 2. **División de la Función `getScore()`**:
-  - La función `getScore()` fue dividida en varias funciones más pequeñas y específicas, siguiendo el principio de responsabilidad única. Esto facilita el mantenimiento y la comprensión del código.
+  - La función `getScore()` fue dividida en varias funciones más pequeñas y específicas.
 
 ## Estructura del Código
 
