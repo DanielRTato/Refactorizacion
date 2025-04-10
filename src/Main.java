@@ -15,7 +15,7 @@ public class Main {
 
 
 
-        return getMarcadorNormal(puntuacionJugador1, puntuacionJugador2);
+        return getRegularScore(puntuacionJugador1, puntuacionJugador2);
     }
 
     /**
@@ -23,7 +23,7 @@ public class Main {
      * @param puntos
      * @return
      */
-    private static String getNombrePuntuacion(int puntos) {
+    private static String getPuntuationName(int puntos) {
         switch (puntos) {
             case 0:
                 return "Love";
@@ -54,8 +54,8 @@ public class Main {
         return "Win for player2";
     }
 
-    private static String getMarcadorNormal(int jugador1, int jugador2) {
-        return getNombrePuntuacion(jugador1) + "-" + getNombrePuntuacion(jugador2);
+    private static String getRegularScore(int jugador1, int jugador2) {
+        return getPuntuationName(jugador1) + "-" + getPuntuationName(jugador2);
     }
 
 
