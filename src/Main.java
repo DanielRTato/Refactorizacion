@@ -39,24 +39,9 @@ public class Main {
     }
 
     public static String getTieScores(int pointPlayers){
-        switch (pointPlayers)
-        {
-            case 0:
-                return "Love-All";
-            case 1:
-                return "Fifteen-All";
+        String[] scoreNames = {"Love-All","Fifteen-All","Thirty-All", "Forty-All" };
 
-            case 2:
-                return "Thirty-All";
-
-            case 3:
-                return "Forty-All";
-
-            default:
-                return "Deuce";
-
-
-        }
+        return pointPlayers < scoreNames.length ? scoreNames[pointPlayers] : "Deuce";
     }
 
     public static String advantageOrWin(int jugador1, int jugador2){
